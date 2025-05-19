@@ -625,7 +625,7 @@ resource cartsapiaca 'Microsoft.App/containerApps@2022-06-01-preview' = {
       secrets: [
         {
           name: cartsApiAcaSecretAcrPassword
-          value: acr.listCredentials().passwords[0].value
+          secureValue: acr.listCredentials().passwords[0].value
         }
       ]
     }
